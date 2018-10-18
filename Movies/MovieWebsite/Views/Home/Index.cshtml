@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MovieWebsite.Models.Genre>
+@{
+    ViewBag.Title = "Genres";
+}
+
+<div>@ViewBag.Title</div>
+
+<div class="genre-list">
+    <div class="card mb-3">
+        <h4 class="card-header">
+            @Html.ActionLink("(All)", "Index", "Movie")
+        </h4>
+    </div>
+</div>
+
+@foreach(var genre in Model)
+{
+    <div class="card mb-3">
+        <h4 class="card-header">
+           @Html.ActionLink(
+           genre.GenreName, "Index", "Movie",
+           routeValues: new { GenreId = genre.GenreId },
+           htmlAttributes: null)
+        </h4>
+    </div>
+}
+

@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[categories] (Table)
+       [dbo].[customers] (Table)
+       [dbo].[employees] (Table)
+       [dbo].[order_details] (Table)
+       [dbo].[orders] (Table)
+       [dbo].[product_vendors] (Table)
+       [dbo].[products] (Table)
+       [dbo].[vendors] (Table)
+       [dbo].[od_orderNumber] (Foreign Key)
+       [dbo].[od_productNumber] (Foreign Key)
+       [dbo].[o_customerID] (Foreign Key)
+       [dbo].[o_employeeID] (Foreign Key)
+       [dbo].[pv_productNumber] (Foreign Key)
+       [dbo].[pv_vendorID] (Foreign Key)
+       [dbo].[p_categoryID] (Foreign Key)
+       [dbo].[AddCustomer] (Procedure)
+       [dbo].[AddOrder] (Procedure)
+       [dbo].[AddProductsToOrder] (Procedure)
+       [dbo].[FindCustomerByID] (Procedure)
+       [dbo].[FindCustomerByName] (Procedure)
+       [dbo].[FindOrderByNumber] (Procedure)
+       [dbo].[RemoveProductFromOrder] (Procedure)
+       [dbo].[SetCustomerAddress] (Procedure)
+       [dbo].[SetCustomerPhoneNumber] (Procedure)
+       [dbo].[ShipOrder] (Procedure)
+       [dbo].[ShowOrderDetails] (Procedure)
+
+** Supporting actions

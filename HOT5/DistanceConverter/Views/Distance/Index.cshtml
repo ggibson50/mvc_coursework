@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Distance Converter";
+}
+
+<h2 class="red">@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Index", "Distance", FormMethod.Get))
+{
+    <div id="distance-form">
+        @Html.Label("inches", "Distance in inches")
+        <br />
+        @Html.TextBox("inches", (object)ViewBag.Inches)
+        <br />
+        <br />
+        <input type="submit" value="Convert to cm" />
+        <br />
+        <br />
+    </div>
+}
+
+@if(ViewBag.Inches != null)
+{
+    <p id="distance-result">@ViewBag.Inches inches in @ViewBag.Conversion centimeters</p>
+}
+

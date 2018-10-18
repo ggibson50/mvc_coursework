@@ -1,0 +1,6 @@
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AcademicReferral\AcademicReferral\bin\Debug\AcademicReferral.dacpac
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AcademicReferral\AcademicReferral\bin\Debug\AcademicReferral.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AcademicReferral\AcademicReferral\bin\Debug\AcademicReferral.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AcademicReferral\AcademicReferral\obj\Debug\AcademicReferral.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AcademicReferral\AcademicReferral\obj\Debug\AcademicReferral.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AcademicReferral\AcademicReferral\obj\Debug\AcademicReferral.sqlprojAssemblyReference.cache

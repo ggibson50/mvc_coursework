@@ -1,0 +1,26 @@
+﻿@Model List<Employee>
+@using Example1.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    @foreach (Employee employee in Model)
+    {
+        <div style="font-weight: bold;">
+            @Html.DisplayNameFor(x => employee.first_name)
+        </div>
+        <div>
+            @Html.DisplayFor(x => employee.first_name)
+        </div>
+        <div style="font-weight: bold;">
+            @Html.DisplayNameFor(x => employee.last_name)
+        </div>
+        <div>
+            @Html.DisplayFor(x => employee.last_name)
+        </div>
+    }
+</div>

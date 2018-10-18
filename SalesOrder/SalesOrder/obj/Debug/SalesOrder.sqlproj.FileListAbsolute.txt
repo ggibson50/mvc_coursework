@@ -1,0 +1,5 @@
+C:\Users\Geoffrey\Desktop\mvc_fall2018\SalesOrder\SalesOrder\bin\Debug\SalesOrder.dacpac
+C:\Users\Geoffrey\Desktop\mvc_fall2018\SalesOrder\SalesOrder\bin\Debug\SalesOrder.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\SalesOrder\SalesOrder\bin\Debug\SalesOrder.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\SalesOrder\SalesOrder\obj\Debug\SalesOrder.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\SalesOrder\SalesOrder\obj\Debug\SalesOrder.pdb

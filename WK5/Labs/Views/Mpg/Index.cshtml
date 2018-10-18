@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Miles Per Gallon";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm("Index", "Mpg", FormMethod.Post))
+{
+    <div>
+        @Html.Label("milesDriven", "Miles Driven:")
+        @Html.TextBox("milesDriven", (object)ViewBag.milesDriven)
+        <br />
+        @Html.Label("gallonsUsed", "Gallons Used:")
+        @Html.TextBox("gallonsUsed", (object)ViewBag.gallonsUsed)
+        <br />
+        @Html.Label("pricePerGallon", "Price Per Gallon:")
+        @Html.TextBox("pricePerGallon", (object)ViewBag.pricePerGallon)
+        <input type="submit" value="Calculate" />
+    </div>
+}
+
+@if (@ViewBag.mpg != null)
+{
+    <p>Your average MPG is @ViewBag.Mpg</p>
+    <p>Your trip cost is @ViewBag.tripCost</p>
+    <p>Your cost per mile is @ViewBag.costPerMile</p>
+}

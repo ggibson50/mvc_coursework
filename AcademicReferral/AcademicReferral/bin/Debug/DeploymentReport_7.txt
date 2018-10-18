@@ -1,0 +1,30 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[CourseStudent].[CourseNumber] is being dropped, data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[CourseStudent] (Table)
+       [dbo].[AddStudent] (Procedure)
+     Create
+       [dbo].[AddCommentsToReferral] (Procedure)
+       [dbo].[AddReasonForReferral] (Procedure)
+       [dbo].[AddReferral] (Procedure)
+       [dbo].[AddStudentToCourse] (Procedure)
+       [dbo].[FindReferralById] (Procedure)
+       [dbo].[FindReferralByStudentId] (Procedure)
+       [dbo].[FindReferralsByCourseId] (Procedure)
+       [dbo].[RemoveStudentFromCourse] (Procedure)
+       [dbo].[SetStudentMajor] (Procedure)
+       [dbo].[SetStudentName] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[CourseStudent].[CourseNumber] is being dropped, data loss could occur.
+

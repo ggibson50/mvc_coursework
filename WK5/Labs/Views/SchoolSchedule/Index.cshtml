@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "School Schedule";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "SchoolSchedule", FormMethod.Get))
+{
+    @Html.Label("search", "Course:")
+    @Html.TextBox("search", (object)ViewBag.Search)
+    <input type="submit" value="Submit" />
+    <br />
+    <br />
+}
+
+@if (!string.IsNullOrWhiteSpace(ViewBag.Search))
+{
+    if (ViewBag.Course != null)
+    {
+        <p>Course: @ViewBag.Course.CourseName</p>
+        <p>Instructor: @ViewBag.Course.Instructor</p>
+        <p>Time: @ViewBag.Course.Time</p>
+    }
+    else
+    {
+        <p>* Course Not Found</p>
+    }
+}

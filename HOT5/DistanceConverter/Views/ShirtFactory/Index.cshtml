@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Crazy Crank's T-Shirt Factory";
+    ViewBag.Subtitle = "Order Form";
+}
+
+<h2 class="red">@ViewBag.Title</h2>
+<h5>@ViewBag.Subtitle</h5>
+
+
+@using (Html.BeginForm("Index", "ShirtFactory", FormMethod.Post))
+{
+<div>
+    <div>
+        @Html.Label("quantity", "Quantity")
+        @Html.TextBox("quantity", (object)ViewBag.Quantity, htmlAttributes: new { @id = "quantity-textbox" })
+    </div>
+    <input type="submit" value="Order" id="submitBtn"/>
+    <br />
+    @Html.Label("code", "Discount Code")
+    @Html.TextBox("code", (object)ViewBag.Code, htmlAttributes: new { @id = "discount-textbox" })
+    <br />
+
+
+    @if (!string.IsNullOrWhiteSpace(ViewBag.Code))
+    {
+        if (ViewBag.Discount != 0)
+        {
+            <p><span class="red">@($"{@ViewBag.Discount:p0}")</span> Discount has been applied!</p>
+        }
+        else if (@ViewBag.Discount == 0)
+        {
+            <p class="red">Invalid Discount</p>
+        }
+    }
+    else
+    {
+        <p></p>
+    }
+</div>
+}
+
+<div id="order-border">
+    @{
+        if (ViewBag.Quantity != null)
+        {
+            <p>@ViewBag.Quantity T-Shirts AT $@($"{ViewBag.ShirtPrice: 0.00}")</p>
+            <p>-------------------------------------------------</p>
+            <p>Subtotal: $@($"{ViewBag.Subtotal: 0.00}")</p>
+            <p>Tax: $@($"{ViewBag.Tax: 0.00}")</p>
+            <p>Grand Total: $@($"{ViewBag.GrandTotal: 0.00}")</p>
+        }
+    }
+</div>

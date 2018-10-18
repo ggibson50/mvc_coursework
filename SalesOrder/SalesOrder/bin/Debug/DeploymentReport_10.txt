@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[AddProductsToOrder] (Procedure)
+       [dbo].[FindCustomerByID] (Procedure)
+       [dbo].[FindCustomerByName] (Procedure)
+       [dbo].[FindOrderByNumber] (Procedure)
+       [dbo].[RemoveProductFromOrder] (Procedure)
+       [dbo].[SetCustomerAddress] (Procedure)
+       [dbo].[SetCustomerPhoneNumber] (Procedure)
+       [dbo].[ShipOrder] (Procedure)
+       [dbo].[ShowOrderDetails] (Procedure)
+
+** Supporting actions

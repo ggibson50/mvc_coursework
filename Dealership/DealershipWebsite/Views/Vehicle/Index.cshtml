@@ -1,0 +1,79 @@
+﻿@model DealershipWebsite.ViewModels.VehicleSearchResults
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Index", "Dealership", FormMethod.Get))
+{
+    var sortByArray = new SelectListItem[]
+    {
+        new SelectListItem { Value = "Make", Text = "Make"},
+        new SelectListItem { Value = "Model", Text = "Model"},
+        new SelectListItem { Value = "Year", Text = "Year"},
+        new SelectListItem { Value = "Price", Text = "Price"}
+    };
+    var sortByList = new SelectList(sortByArray, "Value", "Text");
+<div>
+    @Html.DropDownListFor(m => m.SortBy, sortByList)
+    @Html.EditorFor(m => m.Search, new { htmlAttributes = new { placeholder = "Search" } })
+    <input type="submit" value="Search" />
+    <br />
+    <br />
+</div>
+}
+
+    <table class="movie-list table">
+        <tr class="bg-secondary">
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Results)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(x => item.VehicleMake)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.VehicleModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.VehicleYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.VehicleColor)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.VehiclePrice)
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        @Html.PagedListPager(
+            Model.Results,
+            page => Url.Action("Index", new
+            {
+                Search = Model.Search,
+                MinYear = Model.MinYear,
+                MaxYear = Model.MaxYear,
+                SortBy = Model.SortBy,
+                Page = page,
+                ItemsPerPage = Model.Results.PageSize,
+            }),
+            new PagedListRenderOptions
+            {
+                Display = PagedListDisplayMode.IfNeeded,
+                DisplayPageCountAndCurrentLocation = true,
+                DisplayEllipsesWhenNotShowingAllPageNumbers = true,
+                MaximumPageNumbersToDisplay = 5,
+                PageCountAndCurrentLocationFormat = "Page {0} of {1}"
+            }
+        )
+    </div>

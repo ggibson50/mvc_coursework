@@ -1,0 +1,96 @@
+﻿@model MovieWebsite.ViewModels.MovieSearchResults
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Epic Movies";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Index", "Movie", FormMethod.Get))
+{
+    var genres = new SelectList(Model.Genres, "GenreId", "GenreName");
+
+    var sortByArray = new SelectListItem[]
+    {
+new SelectListItem { Value = "name", Text = "Name" },
+new SelectListItem { Value = "year", Text = "Year" },
+new SelectListItem { Value = "genre", Text = "Genre" }
+    };
+    var sortByList = new SelectList(sortByArray, "Value", "Text");
+
+    <div class="mb-3">
+        @Html.DropDownListFor(m => m.GenreId, genres, "(All)")
+        @Html.EditorFor(m => m.Search, new { htmlAttributes = new { placeholder = "Search" } })
+        @Html.EditorFor(m => m.MinYear, new { htmlAttributes = new { placeholder = "Min" } })
+        @Html.EditorFor(m => m.MaxYear, new { htmlAttributes = new { placeholder = "Max" } })
+        @Html.DropDownListFor(m => m.SortBy, sortByList)
+        <input class="btn btn-primary" type="submit" value="Search" />
+    </div>
+}
+
+    <table class="table">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                Ticket Sales
+            </th>
+            <th>
+                Genre
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Results)
+        {
+        <tr>
+            <td>
+                @Html.ActionLink(item.MovieName, "Details", new { id = item.MovieId })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleasedYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketSales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.GenreName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
+            </td>
+        </tr>
+        }
+    </table>
+    <div>
+        @Html.PagedListPager(
+            Model.Results,
+            page => Url.Action("Index", new
+            {
+                Search = Model.Search,
+                GenreId = Model.GenreId,
+                MinYear = Model.MinYear,
+                MaxYear = Model.MaxYear,
+                SortBy = Model.SortBy,
+                Page = page,
+                ItemsPerPage = Model.Results.PageSize,
+            }),
+            new PagedListRenderOptions
+            {
+                Display = PagedListDisplayMode.IfNeeded,
+                DisplayPageCountAndCurrentLocation = true,
+                DisplayEllipsesWhenNotShowingAllPageNumbers = true,
+                MaximumPageNumbersToDisplay = 5,
+                PageCountAndCurrentLocationFormat = "Page {0} of {1}"
+            }
+        )
+    </div>
+    <p>
+        @Html.ActionLink("Create Movie", "Create")
+    </p>

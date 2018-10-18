@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[employees] (Table)
+       [dbo].[labor_details] (Table)
+       Foreign Key: unnamed constraint on [dbo].[employees] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[labor_details] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[labor_details] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[order_form] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[parts] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[parts] (Foreign Key)
+
+** Supporting actions

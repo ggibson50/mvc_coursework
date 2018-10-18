@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column VehicleYear in table [dbo].[Vehicle] is currently  CHAR (4) NOT NULL but is being changed to  INT
+         NOT NULL. Data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Vehicle] (Table)
+     Create
+       [dbo].[AddVehicle] (Procedure)
+
+** Supporting actions
+
+The type for column VehicleYear in table [dbo].[Vehicle] is currently  CHAR (4) NOT NULL but is being changed to  INT NOT NULL. Data loss could occur.
+

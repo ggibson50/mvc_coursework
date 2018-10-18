@@ -1,0 +1,28 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[customers]
+       [dbo].[employees]
+       [dbo].[order_form]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[FK__parts__orderNum__3C69FB99] (Foreign Key)
+     Table rebuild
+       [dbo].[customers] (Table)
+       [dbo].[employees] (Table)
+       [dbo].[order_form] (Table)
+     Create
+       [dbo].[labor_details] (Table)
+       Foreign Key: unnamed constraint on [dbo].[employees] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[order_form] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[labor_details] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[parts] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[parts] (Foreign Key)
+
+** Supporting actions

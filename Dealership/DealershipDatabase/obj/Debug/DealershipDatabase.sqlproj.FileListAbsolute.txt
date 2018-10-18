@@ -1,0 +1,6 @@
+C:\Users\Geoffrey\Desktop\mvc_fall2018\Dealership\DealershipDatabase\bin\Debug\DealershipDatabase.dacpac
+C:\Users\Geoffrey\Desktop\mvc_fall2018\Dealership\DealershipDatabase\bin\Debug\DealershipDatabase.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\Dealership\DealershipDatabase\bin\Debug\DealershipDatabase.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\Dealership\DealershipDatabase\obj\Debug\DealershipDatabase.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\Dealership\DealershipDatabase\obj\Debug\DealershipDatabase.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\Dealership\DealershipDatabase\obj\Debug\DealershipDatabase.sqlprojAssemblyReference.cache

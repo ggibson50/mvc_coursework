@@ -1,0 +1,10 @@
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\bin\Debug\AutoRepairOrder.dacpac
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\bin\Debug\AutoRepairOrder.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\bin\Debug\AutoRepairOrder.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\AutoRepairOrder.sqlprojAssemblyReference.cache
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\AutoRepairOrder.dll
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\AutoRepairOrder.pdb
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\Model.xml
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\refactor.xml
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\postdeploy.sql
+C:\Users\Geoffrey\Desktop\mvc_fall2018\AutoRepairOrder\AutoRepairOrder\obj\Debug\predeploy.sql

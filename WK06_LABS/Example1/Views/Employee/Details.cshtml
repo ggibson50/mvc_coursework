@@ -1,0 +1,24 @@
+﻿
+@model Example1.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <div style="font-weight: bold;">
+        @Html.DisplayNameFor(x => x.first_name)
+    </div>
+    <div>
+        @Html.DisplayFor(x => x.first_name)
+    </div>
+    <div style="font-weight: bold;">
+        @Html.DisplayNameFor(x => x.last_name)
+    </div>
+    <div>
+        @Html.DisplayFor(x => x.last_name)
+    </div>
+</div>
+

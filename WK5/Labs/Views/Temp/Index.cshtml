@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Temp";
+}
+
+<h2>Temp</h2>
+
+@using (Html.BeginForm("Index", "Temp", FormMethod.Post))
+{
+    <div>
+        @Html.Label("fahrenheit", "Fahrenheit:")
+        @Html.TextBox("fahrenheit", (object)ViewBag.fahrenheit)
+        <br />
+        <input type="submit" value="Calculate" />
+        <br />
+    </div>
+}
+
+@if (ViewBag.fahrenheit != null)
+{
+    <p>-----------------------------------------------</p>
+    <p>Celsius: @($"{ViewBag.celsius: 0.00}")&deg;</p>
+    <p>----------------------</p>
+    <p>Kelvin: @($"{ViewBag.kelTemp: 0.00}")&deg;</p>
+    <p>-----------------------------------------------</p>
+}

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Crazy Crank's T-Shirt Factory</h2>
+
+@using (Html.BeginForm("Index", "Tshirt", FormMethod.Post))
+{
+<div>
+    @Html.Label("quantity", "Quantity")
+    @Html.TextBox("quantity", (object)ViewBag.Quantity)
+    <br />
+    @Html.Label("code", "Discount Code")
+    @Html.TextBox("code", (object)ViewBag.Code)
+    <br />
+    <input type="submit" value="Order" />
+
+    @{
+        if (@ViewBag.Discount != 0 && @ViewBag.Code != "")
+        {
+            <p>@($"{@ViewBag.Discount:p0}") Discount has been applied!</p>
+        }
+        else if(@ViewBag.Code != "" && @ViewBag.Discount == 0)
+        {
+            <p>Invalid Discount</p>
+        }
+        else if(@ViewBag.Code == "" && ViewBag.Quantity != 0)
+        {
+            <p></p>
+        }
+    }
+</div>
+        }
+
+@{
+    if (ViewBag.Quantity != null)
+    {
+        <p>@ViewBag.Quantity T-Shirts AT $@($"{ViewBag.ShirtPrice: 0.00}")</p>
+        <p>-------------------------------------------------</p>
+        <p>Subtotal: $@($"{ViewBag.Subtotal: 0.00}")</p>
+        <p>Tax: $@($"{ViewBag.Tax: 0.00}")</p>
+        <p>Grand Total: $@($"{ViewBag.GrandTotal: 0.00}")</p>
+    }
+}

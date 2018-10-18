@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Instructor]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Instructor] (Table)
+     Create
+       [dbo].[Reason] (Table)
+       [dbo].[Referral] (Table)
+       [dbo].[ReferralReason] (Table)
+       Foreign Key: unnamed constraint on [dbo].[Referral] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Referral] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Referral] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[ReferralReason] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[ReferralReason] (Foreign Key)
+
+** Supporting actions

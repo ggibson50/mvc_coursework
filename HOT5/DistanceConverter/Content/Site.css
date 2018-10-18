@@ -1,0 +1,67 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#order-border {
+    border: thick dotted black;
+    border-collapse: collapse;
+    width: 50%;
+    border-color: red;
+}
+
+#order-border p {
+    padding-left: 15px;
+}
+
+#quantity-textbox {
+    margin-left: 70px;
+}
+
+#discount-textbox {
+    margin-left: 28.5px;
+}
+
+#submitBtn {
+    margin-left: 320px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.red {
+    color: red;
+}
+
+#distance-form {
+    margin-left: 5.5em;
+}
+
+#distance-result {
+    margin-left: 6em;
+    border: thin inset red;
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 1.5em;
+    border-collapse: collapse;
+    border-width: 2px;
+    width: 20%;
+}
